@@ -1,9 +1,21 @@
 import streamlit as st
-import qrcode
 from io import BytesIO
+import qrcode
+
+
+# Configurar o layout e título da página
+st.set_page_config(page_title="QR Code", layout="centered")
+st.sidebar.header("Instruções")
+st.sidebar.write("""
+- Gerador de QRCode
+- Caso tenha alguma idéia para publicarmos, envie uma mensagem para: 11-990000425 (Willian)
+- Contribua com qualquer valor para mantermos a pagina no ar. PIX (wpyagami@gmail.com)
+""")
+
+
 
 def generate_qr_code(data):
-    qr = qrcode.QRCode(
+    qr = qrcode.QRCode(  # Corrigido de qrcode.Qrcode para qrcode.QRCode
         version=1,
         error_correction=qrcode.constants.ERROR_CORRECT_L,
         box_size=10,

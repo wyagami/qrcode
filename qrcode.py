@@ -4,7 +4,8 @@ import qrcode
 
 
 # Configurar o layout e título da página
-st.set_page_config(page_title="QR Code", layout="centered")
+st.title("QR Code")
+
 st.sidebar.header("Instruções")
 st.sidebar.write("""
 - Gerador de QRCode
